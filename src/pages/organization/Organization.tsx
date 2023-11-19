@@ -1,15 +1,15 @@
 import React from "react";
 import SectionLabel from "../../components/sectionLabel/SectionLabel";
 import CapacityBar from "../../components/capacityBar/CapacityBar";
-import "./Facility.css";
+import "./Organization.css";
 import Card from "../../components/card/Card";
 
-const Facility = () => {
+const Organization = () => {
   return (
     <div className="page">
       <div className="occupancySection">
         <SectionLabel text="Current Occupancy" background="orange" />
-        <CapacityBar text="Facility" background="lightgreen" capacity={50} />
+        <CapacityBar text="Organization" background="lightgreen" capacity={50} />
       </div>
       <div className="alertsSection">
         <SectionLabel text="Alerts" background="blue" />
@@ -71,4 +71,4 @@ const Facility = () => {
   );
 };
 
-export default Facility;
+export default Organization;

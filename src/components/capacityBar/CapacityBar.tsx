@@ -9,7 +9,7 @@ interface CapacityBarProps {
 
 const CapacityBar = ({ text, background, capacity }: CapacityBarProps) => {
   return (
-    <div className="container">
+    <div className="capacityContainer">
       <div className="progress-label"><h3>{text}</h3></div>
       <div className="capacity-bar">
         <div className="capacity-bar-fill" style={{ width: `${capacity}%`, backgroundColor: background }}></div>
