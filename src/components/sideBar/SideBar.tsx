@@ -13,22 +13,22 @@ const SideBar = ({children}: { children: React.ReactNode }) => {
     const menuItems =[
         {
             path: "/organization",
-            name: "organization",
+            name: "Organization",
             icon: <SlOrganization  />
         },
         {
             path: "/facility",
-            name: "facility",
+            name: "Facilities",
             icon: <FaBuilding />
         },
         {
             path: "/wing",
-            name: "wing",
+            name: "Wings",
             icon: <GiSpikyWing />
         },
         {
             path: "/room",
-            name: "room",
+            name: "Rooms",
             icon:<MdBedroomParent />
         }        
     ] 

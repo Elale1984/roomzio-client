@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import SideBar from './components/sideBar/SideBar';
-import Facility from './pages/Facility';
+import Facility from './pages/facility/Facility';
 import Login from './pages/Login';
 import Organization from './pages/Organization';
 import Register from './pages/Register';
