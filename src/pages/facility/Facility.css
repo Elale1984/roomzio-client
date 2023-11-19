@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .occupancyBar {
@@ -33,4 +33,10 @@
 
 .maintenanceSection {
 
+}
+
+.maintenanceCards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }

@@ -1,6 +1,4 @@
-
-
-.container {
+.sidebarContainer {
   display: flex;
   align-self: center;
 
@@ -9,20 +7,23 @@
 main {
   width: 100%;
   padding: 20px;
+
 }
 
 .sidebar{
   background: darkslateblue;
   color: white;
-  height: 100vh;
+  height: auto;
   width: 200px;
-  transition: all 0.5s;  
+  transition: all 0.5s;
+    
 }
 
 .top_section {
   display: flex;
   align-items: center;
   padding: 20px 15px;
+
 }
 
 .logo {

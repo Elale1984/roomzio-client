@@ -33,7 +33,7 @@ const SideBar = ({children}: { children: React.ReactNode }) => {
         }        
     ] 
   return (
-      <div className="container">
+      <div className="sidebarContainer">
         <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
             <div className="top_section">
                 <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">RoomzIO</h1>

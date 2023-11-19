@@ -39,6 +39,33 @@ const Facility = () => {
       </div>
       <div className="maintenanceSection">
         <SectionLabel text="Maintenance Tickets" background="magenta" />
+        <div className="maintenanceCards">
+        <Card
+            headerColor="DarkCyan "
+            bodyColor="Cyan"
+            headerText="Bulb Change"
+            wingNumber="North Wing"
+            roomNumber="Room 205"
+            dateEntered="08/12/2023"
+
+          />
+           <Card
+            headerColor="DarkOliveGreen "
+            bodyColor="DarkKhaki"
+            headerText="Door Issue"
+            wingNumber="North Wing"
+            roomNumber="Room 205"
+            dateEntered="08/12/2023"
+          />
+          <Card
+            headerColor="GoldenRod"
+            bodyColor="Gold"
+            headerText="Fix O2 Machine"
+            wingNumber="North Wing"
+            roomNumber="Room 205"
+            dateEntered="08/12/2023"
+          />
+          </div>
       </div>
     </div>
   );
