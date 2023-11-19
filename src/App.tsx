@@ -4,12 +4,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import SideBar from './components/sideBar/SideBar';
 import Facility from './pages/facility/Facility';
-import Login from './pages/Login';
-import Organization from './pages/Organization';
-import Register from './pages/Register';
-import Room from './pages/Room';
-import Welcome from './pages/Welcome';
-import Wing from './pages/Wing';
+import Login from './pages/login/Login';
+import Organization from './pages/organization/Organization';
+import Register from './pages/register/Register';
+import Room from './pages/room/Room';
+import Welcome from './pages/welcome/Welcome';
+import Wing from './pages/wing/Wing';
 
 
 const  App = () => {
