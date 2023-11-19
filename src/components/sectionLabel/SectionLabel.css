@@ -1,0 +1,18 @@
+.labels {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 20px;
+    -moz-box-shadow: 1px 2px 2px black;
+    -webkit-box-shadow: 1px 2px 2px black;
+    box-shadow: 1px 2px 2px black;
+}
+
+.text {
+
+    font-family: fantasy;
+	color: white;
+	-webkit-text-stroke: .5px black;
+	text-shadow: 0px 1px 1px black;
+}

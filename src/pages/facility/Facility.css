@@ -1,0 +1,29 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 300px);
+}
+
+.occupancySection {
+    
+}
+
+.occupancyBar {
+    align-items: center;
+}
+.alertsSection {
+
+}
+.alertCards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.cleaningSection {
+
+}
+
+.maintenanceSection {
+
+}
