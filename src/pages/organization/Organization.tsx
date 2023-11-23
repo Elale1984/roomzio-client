@@ -9,7 +9,7 @@ const Organization = () => {
     <div className="page">
       <div className="occupancySection">
         <SectionLabel text="Current Occupancy" background="orange" />
-        <CapacityBar text="Organization" background="lightgreen" capacity={50} />
+        <CapacityBar text="Organization" background="lightgreen" capacity={60} />
       </div>
       <div className="alertsSection">
         <SectionLabel text="Alerts" background="blue" />
