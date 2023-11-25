@@ -1,0 +1,16 @@
+.welcome-container {
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    width: 100vw;
+}
+
+.welcome-container-left {
+    flex: 0.65;
+    background-color: #B3A4E7;
+}
+
+.welcome-container-right {
+    flex: 0.35;
+    background-color: #CAF6DB;
+}
