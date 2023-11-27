@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.landingPage-container {
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    width: 100vw;
+}
+
+.landingPage-container-left {
+    flex: 0.65;
+    background-color: #CAF6DB ;
+    justify-content: center;
+    align-items: center;
+}
+
+.landingPage-container-right {
+    flex: 0.35;
+    background-color: #B3A4E7;
+}
+
+.welcome-image {
+    width: auto;
+    height: 99vh;
+}
