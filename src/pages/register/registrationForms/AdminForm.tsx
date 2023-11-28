@@ -1,14 +1,67 @@
 import { FormWrapper } from "./FormWrapper";
 
-export function AdminForm() {
+type AdminData = {
+  firstName: string;
+  lastName: string;
+  username: string;
+  userType: string;
+  email: string;
+  password: string;
+};
+
+type AdminFormProps = AdminData & {
+  updateFields: (fields: Partial<AdminData>) => void;
+};
+
+export function AdminForm({
+  firstName,
+  lastName,
+  username,
+  userType = 'admin',
+  email,
+  password,
+  updateFields,
+}: AdminFormProps) {
   return (
     <FormWrapper title="Admin Setup">
-      <input type="text" autoFocus required placeholder="First Name" />
-      <input type="text" required placeholder="Last Name" />
-      <input type="email" required placeholder="Email" />
-      <input type="text" required placeholder="Username" />
-      <input type="password" required placeholder="Password" />
-      <input type="password" required placeholder="Confirm Password" />
+      <input
+        type="text"
+        autoFocus
+        placeholder="First Name"
+        value={firstName}
+        onChange={(e) => updateFields({ firstName: e.target.value })}
+      />
+      <input
+        type="text"        
+        placeholder="Last Name"
+        value={lastName}
+        onChange={(e) => updateFields({ lastName: e.target.value })}
+      />
+      <input
+        type="email"        
+        placeholder="Email"
+        value={email}
+        onChange={(e) => updateFields({ email: e.target.value })}
+      />
+      <input
+        type="text"        
+        placeholder="Username"
+        value={username}
+        onChange={(e) => updateFields({ username: e.target.value })}
+      />
+      
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => updateFields({ password: e.target.value })}
+      />
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        value={password}
+        onChange={(e) => updateFields({ password: e.target.value })}
+      />
     </FormWrapper>
   );
 }
