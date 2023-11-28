@@ -1,6 +1,7 @@
 {
   "name": "roomzio-client",
-  "version": "0.1.0",
+  "version": "2.0.0",
+  "proxy": "http://localhost:8080",
   "private": true,
   "dependencies": {
     "@tanstack/react-query": "^5.8.7",
@@ -55,6 +56,10 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "author": "",
-  "license": "ISC"
+  "author": "elale",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "roomz-client"
+  }
 }

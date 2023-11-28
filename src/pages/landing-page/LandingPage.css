@@ -25,3 +25,30 @@
     width: auto;
     height: 99vh;
 }
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 2px solid greenyellow;
+    box-shadow: 2px 3px 4px black;
+}
+
+.btn-form-control {
+    padding: 3px;
+    margin-left: 120px;
+    margin-bottom: 30px;
+    width: 60px;
+    border-radius: 5px;
+    background: #CAF6DB;
+    box-shadow: 1px 2px 2px black;
+}

@@ -5,6 +5,8 @@ import { GiSpikyWing } from "react-icons/gi";
 import { MdBedroomParent } from "react-icons/md";
 import { FaBars } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
+import { FaSignOutAlt } from "react-icons/fa";
+
 import './SideBar.css'
 
 const SideBar = ({children}: { children: React.ReactNode }) => {
@@ -12,24 +14,29 @@ const SideBar = ({children}: { children: React.ReactNode }) => {
     const toggle = () => setIsOpen (!isOpen)
     const menuItems =[
         {
-            path: "/organization",
+            path: "/dashboard/organization",
             name: "Organization",
             icon: <SlOrganization  />
         },
         {
-            path: "/facility",
+            path: "/dashboard/facility",
             name: "Facilities",
             icon: <FaBuilding />
         },
         {
-            path: "/wing",
+            path: "/dashboard/wing",
             name: "Wings",
             icon: <GiSpikyWing />
         },
         {
-            path: "/room",
+            path: "/dashboard/room",
             name: "Rooms",
             icon:<MdBedroomParent />
+        },
+        {
+            path: "/dashboard/logout",
+            name: "Sign Out",
+            icon: <FaSignOutAlt/>
         }        
     ] 
   return (

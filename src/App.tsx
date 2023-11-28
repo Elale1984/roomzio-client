@@ -9,31 +9,33 @@ import Register from "./pages/register/Register";
 import Room from "./pages/room/Room";
 import Wing from "./pages/wing/Wing";
 import LandingPage from "./pages/landing-page/LandingPage";
+import Logout from "./pages/logout/logout";
 
 const App = () => {
 
   return (
-      <BrowserRouter>
-          <Routes>
-            <Route path="/landing" element={<LandingPage />} />
-            <Route
-              path="/dashboard/*"
-              element={
-                <React.Fragment>
-                  <SideBar>
-                    <Routes>
-                      <Route path="/register" element={<Register />} />
-                      <Route path="/organization" element={<Organization />} />
-                      <Route path="/facility" element={<Facility />} />
-                      <Route path="/wing" element={<Wing />} />
-                      <Route path="/room" element={<Room />} />
-                    </Routes>
-                  </SideBar>
-                </React.Fragment>
-              }
-            />
-          </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/landing" element={<LandingPage />} />
+      <Route path="register" element={<Register />} />
+      <Route
+        path="/dashboard/*"
+        element={
+          <React.Fragment>
+            <SideBar >
+            <Routes>
+              <Route path="organization" element={<Organization />} />
+              <Route path="facility" element={<Facility />} />
+              <Route path="wing" element={<Wing />} />
+              <Route path="room" element={<Room />} />
+              <Route path="logout" element={<Logout />} />
+            </Routes>
+            </SideBar>
+          </React.Fragment>
+        }
+      />
+    </Routes>
+  </BrowserRouter>
   );
 };
 
