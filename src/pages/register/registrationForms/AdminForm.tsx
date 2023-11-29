@@ -7,6 +7,7 @@ type AdminData = {
   userType: string;
   email: string;
   password: string;
+  rePassword: string;
 };
 
 type AdminFormProps = AdminData & {
@@ -17,9 +18,10 @@ export function AdminForm({
   firstName,
   lastName,
   username,
-  userType = 'admin',
+  userType,
   email,
   password,
+  rePassword,
   updateFields,
 }: AdminFormProps) {
   return (
@@ -32,24 +34,24 @@ export function AdminForm({
         onChange={(e) => updateFields({ firstName: e.target.value })}
       />
       <input
-        type="text"        
+        type="text"
         placeholder="Last Name"
         value={lastName}
         onChange={(e) => updateFields({ lastName: e.target.value })}
       />
       <input
-        type="email"        
+        type="email"
         placeholder="Email"
         value={email}
         onChange={(e) => updateFields({ email: e.target.value })}
       />
       <input
-        type="text"        
+        type="text"
         placeholder="Username"
         value={username}
         onChange={(e) => updateFields({ username: e.target.value })}
       />
-      
+
       <input
         type="password"
         placeholder="Password"
@@ -59,8 +61,8 @@ export function AdminForm({
       <input
         type="password"
         placeholder="Confirm Password"
-        value={password}
-        onChange={(e) => updateFields({ password: e.target.value })}
+        value={rePassword}
+        onChange={(e) => updateFields({ rePassword: e.target.value })}
       />
     </FormWrapper>
   );

@@ -1,36 +1,52 @@
-import React, { FormEvent, useState } from "react";
+// Register.tsx
+import { FormEvent, useState } from "react";
 import { useMultiStepForm } from "./useMultiStepForm";
-import "./Register.css";
 import { AdminForm } from "./registrationForms/AdminForm";
 import { AddressForm } from "./registrationForms/AddressForm";
 import { OrganizationForm } from "./registrationForms/OrganizationForm";
 import { ServiceTypeForm } from "./registrationForms/ServiceTypeForm";
-
-type FormData = {
-  serviceTypeName1: string,
-  serviceTypeName2: string,
-  serviceTypeName3: string,
-}
-const INITIAL_DATA: FormData = {
-  serviceTypeName1: '',
-  serviceTypeName2:'',
-  serviceTypeName3: '',
-}
+import { FormData, INITIAL_REGISTRATION_DATA } from "./registrationForms/InitialRegistrationData";
+import { handleRegistration } from "../../utils/registerUtils";
+import { useNavigate } from "react-router-dom";
+import './Register.css'
 
 const Register = () => {
-  const [data, setData] = useState(INITIAL_DATA)
-  function updateFields(fields: Partial<FormData> ) {
-    setData(prev => {
-      return { ...prev, ...fields }
-    })
-  }
-  const { steps, currentStepIndex, step, isFirstStep, isLastStep, back, next } =
-    useMultiStepForm([ <ServiceTypeForm {...data} updateFields={updateFields} /> ]);
+  const [data, setData] = useState(INITIAL_REGISTRATION_DATA);
+  const navigate = useNavigate();
 
-    function onSubmit(e: FormEvent) {
-      e.preventDefault()
-      next()
+  function updateFields(fields: Partial<FormData>) {
+    setData((prev) => {
+      data.userType = "admin";
+      return { ...prev, ...fields };
+    });
+  }
+
+  const { steps, currentStepIndex, step, isFirstStep, isLastStep, back, next } =
+    useMultiStepForm([
+      <AdminForm {...data} updateFields={updateFields} />,
+      <OrganizationForm {...data} updateFields={updateFields} />,
+      <AddressForm {...data} updateFields={updateFields} />,
+      <ServiceTypeForm {...data} updateFields={updateFields} />,
+    ]);
+
+  const onSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    if (!isLastStep) return next();
+    console.log(data);
+
+    try {
+      await handleRegistration(
+        data,
+      );
+
+      navigate('/dashboard/organization');
+
+    } catch (err) {
+      console.error(err);
     }
+  }
+
   return (
     <div className="register-container">
       <div className="register-form-card">
@@ -45,9 +61,7 @@ const Register = () => {
                 Back
               </button>
             )}
-            <button type="submit">
-              {isLastStep ? "Finish" : "Next"}
-            </button>
+            <button type="submit">{isLastStep ? "Finish" : "Next"}</button>
           </div>
         </form>
       </div>

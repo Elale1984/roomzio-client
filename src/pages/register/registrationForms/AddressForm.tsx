@@ -25,38 +25,33 @@ export function AddressForm({
       <input
         type="text"
         autoFocus
-        required
         placeholder="Street Number"
         value={addressStreetNumber}
         onChange={(e) => updateFields({ addressStreetNumber: e.target.value })}
       />
       <input
         type="text"
-        required
         placeholder="Street Name"
         value={addressStreetName}
-        onChange={(e) => updateFields({ addressStreetNumber: e.target.value })}
+        onChange={(e) => updateFields({ addressStreetName: e.target.value })}
       />
       <input
         type="text"
-        required
         placeholder="City"
         value={addressCity}
-        onChange={(e) => updateFields({ addressStreetNumber: e.target.value })}
+        onChange={(e) => updateFields({ addressCity: e.target.value })}
       />
       <input
         type="text"
-        required
         placeholder="State"
         value={addressState}
-        onChange={(e) => updateFields({ addressStreetNumber: e.target.value })}
+        onChange={(e) => updateFields({ addressState: e.target.value })}
       />
       <input
         type="text"
-        required
         placeholder="Zip Code"
         value={addressZipCode}
-        onChange={(e) => updateFields({ addressStreetNumber: e.target.value })}
+        onChange={(e) => updateFields({ addressZipCode: e.target.value })}
       />
     </FormWrapper>
   );

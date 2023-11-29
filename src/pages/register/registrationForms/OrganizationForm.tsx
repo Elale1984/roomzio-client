@@ -19,14 +19,12 @@ export function OrganizationForm({
       <input
         type="text"
         autoFocus
-        required
         placeholder="Organization Name"
         value={organizationName}
         onChange={(e) => updateFields({ organizationName: e.target.value })}
       />
       <input
         type="email"
-        required
         placeholder="Organization Email"
         value={organizationEmail}
         onChange={(e) => updateFields({ organizationEmail: e.target.value })}

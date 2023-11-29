@@ -1,11 +1,11 @@
 // axiosConfig.ts
-import axios from 'axios';
+import axios, { AxiosInstance } from 'axios';
 
-const axiosInstance = axios.create({
+const AxiosConfig: AxiosInstance = axios.create({
   baseURL: 'http://localhost:8080',
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-export default axiosInstance;
+export default AxiosConfig;

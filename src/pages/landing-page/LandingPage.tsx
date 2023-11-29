@@ -1,7 +1,7 @@
 // LandingPage.tsx
 import React, { useState, useRef } from "react";
-import axiosInstance from "../../api/AxiosConfig";
-import { handleLogin } from "../../auth/authUtils";
+import AxiosConfig from "../../api/AxiosConfig";
+import { handleLogin } from "../../utils/authUtils";
 import { LOGIN_ENDPOINT } from "../../api/apiEndpoints";
 import { validateUsername, validatePassword } from "../../utils/formUtils";
 import welcomeImage from "../../assets/img/welcome-page.png";
@@ -29,7 +29,7 @@ const LandingPage: React.FC = () => {
 
     try {
       await handleLogin(
-        axiosInstance,
+        AxiosConfig,
         LOGIN_ENDPOINT,
         formData.username,
         formData.password

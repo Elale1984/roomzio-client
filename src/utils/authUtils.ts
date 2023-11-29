@@ -1,5 +1,5 @@
 // authUtils.ts
-import axiosInstance from '../api/AxiosConfig';
+import AxiosConfig from '../api/AxiosConfig';
 import { AxiosInstance } from 'axios';
 
 export const handleLogin = async (
@@ -13,17 +13,18 @@ export const handleLogin = async (
     
     return response.data;
   } catch (error) {
-    throw error;
+    console.log(error)
   }
 };
 
 export const handleLogout = async () => {
   try {
 
-    const response = await axiosInstance.post('/auth/logout');
+    const response = await AxiosConfig.post('/auth/logout');
     return response.data;
   } catch (error) {
-    throw error;
+    console.log(error)
+  
   }
 };
 
